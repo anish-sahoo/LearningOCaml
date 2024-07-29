@@ -67,3 +67,7 @@ let decr x = x - 1
 let incr x = x + 1
 
 let () = 5 |> decr |> pow |> incr |> Printf.printf "Pipeline result 17: %d\n" 
+let () = (incr (pow (decr 5))) |> Printf.printf "Non-pipeline result 17: %d\n"  
+
+let labelled_args ~name_1:n1 : unit = Printf.printf "Name1: %s\n" n1
+  
